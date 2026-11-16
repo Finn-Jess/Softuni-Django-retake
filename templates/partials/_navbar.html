@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{% url 'core:home' %}">GearVault</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:home' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'equipment:gear_list' %}">Equipment Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'equipment:category_list' %}">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'expeditions:expedition_list' %}">Expeditions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:about' %}">About</a>
+                </li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="{% url 'equipment:gear_create' %}" class="btn btn-outline-light btn-sm">+ Add Gear</a>
+                <a href="{% url 'expeditions:expedition_create' %}" class="btn btn-warning btn-sm">+ New Expedition</a>
+            </div>
+        </div>
+    </div>
+</nav>

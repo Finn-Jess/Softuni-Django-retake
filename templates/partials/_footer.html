@@ -1,0 +1,11 @@
+<footer class="bg-dark text-light py-3 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <span class="small">&copy; 2026 GearVault Equipment Management. Built with Django.</span>
+        <div class="small mt-2 mt-md-0">
+            <a href="{% url 'core:home' %}" class="text-light text-decoration-none me-3">Home</a>
+            <a href="{% url 'equipment:gear_list' %}" class="text-light text-decoration-none me-3">Catalog</a>
+            <a href="{% url 'expeditions:expedition_list' %}" class="text-light text-decoration-none me-3">Expeditions</a>
+            <a href="{% url 'core:about' %}" class="text-light text-decoration-none">About</a>
+        </div>
+    </div>
+</footer>
