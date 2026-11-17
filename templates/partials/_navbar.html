@@ -1,3 +1,4 @@
+{% load vault_tags %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold" href="{% url 'core:home' %}">GearVault</a>
@@ -7,19 +8,19 @@
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'core:home' %}">Dashboard</a>
+                    <a class="nav-link {% active_nav 'core:home' %}" href="{% url 'core:home' %}">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'equipment:gear_list' %}">Equipment Catalog</a>
+                    <a class="nav-link {% active_nav 'equipment:gear_list' %}" href="{% url 'equipment:gear_list' %}">Equipment Catalog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'equipment:category_list' %}">Categories</a>
+                    <a class="nav-link {% active_nav 'equipment:category_list' %}" href="{% url 'equipment:category_list' %}">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'expeditions:expedition_list' %}">Expeditions</a>
+                    <a class="nav-link {% active_nav 'expeditions:expedition_list' %}" href="{% url 'expeditions:expedition_list' %}">Expeditions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'core:about' %}">About</a>
+                    <a class="nav-link {% active_nav 'core:about' %}" href="{% url 'core:about' %}">About</a>
                 </li>
             </ul>
             <div class="d-flex gap-2">
